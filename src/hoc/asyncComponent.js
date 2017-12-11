@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 const asyncComponent = importComponent => {
   return class extends Component {
@@ -13,7 +13,7 @@ const asyncComponent = importComponent => {
     }
 
     render() {
-      const C = this,state.component;
+      const C = this.state.component;
 
       return C ? <C {...this.props} /> : null;
     }
